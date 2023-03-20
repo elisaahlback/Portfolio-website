@@ -1,0 +1,56 @@
+
+/* Imports */
+
+@font-face {
+  font-family: BlackMango;
+  src: url(.././assets/Black\ Mango\ Black.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*      */
+
+
+.App {
+  background-image: url('.././assets/Background.svg');
+  /*aspect-ratio: 960/300;*/
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  font-family: Outfit;
+  color: #121212;
+padding: 40px 180px 0 180px;
+}
+
+.hero-row {
+  height: 630px;
+}
+
+.hero {
+  font-weight: 800;
+  font-size: 70px;
+  line-height: 110%;
+}
+
+.aboutme-row {
+  height: 630px;
+}
+
+#profile-pic {
+  height: 350px;
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 30px;
+}
+
+p {
+  font-size: 20px;
+}
+
+#location-icon {
+  height: 30px;
+}
