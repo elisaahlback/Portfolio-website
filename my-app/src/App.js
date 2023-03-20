@@ -1,19 +1,48 @@
-import './App.css';
+import './styles/App.css';
 import React from "react";
-import ButtonMailto from './modules/mail';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
     <div className="App">
-        <h1>
-          Hi! I'm Elisa 🤠
-        </h1>
-        <h2>
-          Who am I?
-        </h2>
-        <p>
-          A Software Engineering and Management student, with a passion for front-end development and user experience.
-        </p>
+      <NavBar></NavBar>
+      <div class="row hero-row d-flex align-items-center">
+        <div class="col col-7 ">
+          <h1 class="hero">
+            A software engineering student, with a passion for front-end development and UX.
+          </h1>
+        </div>
+      </div>
+        
+      <div class="row aboutme-row d-flex align-items-center">
+        <div class="col col-5">
+        <img id="profile-pic" src={require('./assets/profile.png')} />
+        </div>
+
+        <div class="col col-7">
+
+          <div class="row">
+            <div class="col">
+              <h2>Hi, I'm Elisa!</h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <p>A half-English, half-Swedish creative thinker, passionate about design and creating things?. After growing up in Spain, I moved to Sweden to pursue a Software Engineering & Management bachelors degree, which I’m currently in the second year.</p><br/>
+              <p>I strive to continuously improve and gain further experience, as well as enjoying learning from others around me, being easily adaptable to a team or individual work environments.</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <img id="location-icon" src={require('./assets/location.png')} />
+              <p><b>Gothenburg, Sweden</b></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
 
         <div class="projects">
           <h2>
