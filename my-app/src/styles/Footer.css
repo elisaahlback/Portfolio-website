@@ -1,0 +1,39 @@
+
+.footer-row {
+    background-color: #212427;
+    height: 140px;
+    width: 100%;
+    color: #F8F4EA;
+    padding-top: 20px;
+    font-size: 1rem;
+}
+
+#bottom-e {
+    font-size: 4rem;
+    padding-top: 0;
+    font-family: BlackOrange;
+    font-weight: 800;
+}
+
+#nav-item1, #nav-item2, #nav-item3 {
+    text-align: center;
+    font-weight: 700;
+    color: #F8F4EA;
+}
+
+#nav-item1 {
+    text-align: right;
+}
+
+#nav-item3 {
+    text-align: left;
+}
+
+#footer-logo {
+    font-family: BlackMango;
+    font-size: 3.5rem;
+    font-style: none;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #F8F4EA;
+}

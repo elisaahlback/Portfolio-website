@@ -1,8 +1,9 @@
-import './styles/MainPage.css';
+import '.././styles/MainPage.css';
 import React from "react";
-import NavBar from './components/NavBar';
-import FigmaLogo from './assets/figma.svg';
-import Line from './components/Line';
+import NavBar from '.././components/NavBar';
+import FigmaLogo from '.././assets/figma.svg';
+import Line from '.././components/Line';
+import Footer from '.././components/Footer';
 
 function MainPage() {
   return (
@@ -18,7 +19,7 @@ function MainPage() {
         
       <div class="row aboutme-row d-flex align-items-center">
         <div class="col col-5">
-        <img id="profile-pic" src={require('./assets/profile.png')} />
+        <img id="profile-pic" src={require('.././assets/profile.png')} />
         </div>
 
         <div class="col col-7">
@@ -38,7 +39,7 @@ function MainPage() {
 
           <div class="row">
             <div class="col">
-              <img id="location-icon" src={require('./assets/location.png')} />
+              <img id="location-icon" src={require('.././assets/location.png')} />
               <p><b>Gothenburg, Sweden</b></p>
             </div>
           </div>
@@ -52,31 +53,31 @@ function MainPage() {
             <div class="row tools-row d-flex align-items-center justify-content-center">
               
               <div class="col col-1 d-flex justify-content-center">
-                <img id="tool-icon" src={require('./assets/html.png')}></img>
+                <img id="tool-icon" src={require('.././assets/html.png')}></img>
               </div>
               
               <div class="col col-1 d-flex justify-content-center">
-                <img id="tool-icon" src={require('./assets/css.png')}></img>
+                <img id="tool-icon" src={require('.././assets/css.png')}></img>
               </div>
 
               <div class="col col-1 d-flex justify-content-center">
-                <img id="tool-icon" src={require('./assets/javascript.webp')}></img>
+                <img id="tool-icon" src={require('.././assets/javascript.webp')}></img>
               </div>
 
               <div class="col col-1 d-flex justify-content-center">
-                <img id="tool-icon" src={require('./assets/java.png')}></img>
+                <img id="tool-icon" src={require('.././assets/java.png')}></img>
               </div>
 
               <div class="col col-1 d-flex justify-content-center">
-                <img id="tool-icon" src={require('./assets/vue.png')}></img>
+                <img id="tool-icon" src={require('.././assets/vue.png')}></img>
               </div>
 
               <div class="col col-1 d-flex justify-content-center">
-                <img id="tool-icon" src={require('./assets/bootstrap.png')}></img>
+                <img id="tool-icon" src={require('.././assets/bootstrap.png')}></img>
               </div>
 
               <div class="col col-1 d-flex justify-content-center">
-                <img id="tool-icon" src={require('./assets/git.png')}></img>
+                <img id="tool-icon" src={require('.././assets/git.png')}></img>
               </div>
 
               <div class="col col-1 d-flex justify-content-center">
@@ -92,15 +93,24 @@ function MainPage() {
 
       </div>
 
-      <div class="row projects-row d-flex align-items-center">
-        <div class="col col-12 d-flex justify-content-center">
-          <h2>
-            Projects
-          </h2>
+      <div class="row projects-row">
+        <div class="row project-row">
+          <div class="col col-12 d-flex justify-content-left">
+            <h2 id="projects-title">
+              Projects
+            </h2>
+          </div>
         </div>
+
+        <div class="row">
+          <Line></Line>
+        </div>
+        
+
 
   
     </div>
+    <Footer></Footer>
     </div>
   );
 };
