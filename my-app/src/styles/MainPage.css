@@ -20,7 +20,7 @@
   align-items: center;
   font-size: calc(10px + 2vmin);
   font-family: Outfit;
-  color: #121212;
+  color: #212427;
   padding-top: 40px;
   /*padding: 40px 180px 0 180px;*/
 }
@@ -38,7 +38,7 @@
 
 .aboutme-row {
   height: 640px;
-  background-color: #121212;
+  background-color: #212427;
   color: #F8F4EA;
   padding-left: 0;
   padding: 20px 180px 20px 180px;
@@ -71,18 +71,27 @@ p {
 
 #tool-icon {
   height: 50px;
-  margin: 0 40px;
+  margin: 0 100px;
 }
 
 .projects-row {
-  padding: 50px 180px 20px 180px;
-  height: 1100px;
+  width: 100%;
 }
 
-h2 {
+.project-row {
+  padding: 150px 180px 20px 180px;
+}
+
+#projects-title {
   align-items: left;
+  font-size: 65px;
+  font-weight: 800;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 hr {
-  color: #121212;
+  color: #212427;
+  width: 2000px;
+  height: 20px;
 }
