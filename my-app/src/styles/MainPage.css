@@ -30,10 +30,20 @@
   padding: 40px 180px 40px 180px;
 }
 
-.hero {
+.name {
+  font-family: BlackMango;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 70%;
+  color: #212427;
+}
+
+.about-me-left-text {
   font-weight: 800;
   font-size: 70px;
-  line-height: 110%;
+  line-height: 115%;
+  color: #F8F3E9;
+  width: 70%;
 }
 
 .aboutme-row {
@@ -94,4 +104,18 @@ hr {
   color: #212427;
   width: 2000px;
   height: 20px;
+}
+
+.about-me-rectangle {
+  width: 100vw;    /* Full width of the viewport */
+  height: 100vh;   /* Full height of the viewport */
+}
+
+.about-me-left {
+  background-color: #212427;
+}
+
+.about-me-right {
+  border-style: solid;
+  background-color: transparent;
 }

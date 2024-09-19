@@ -1,29 +1,18 @@
 nav {
-width: 100%;
+    width: 100%;
+    padding: 0 20px;
 }
 
-.nav-title {
+#nav-logo {
     font-family: BlackMango;
     color: #212427;
-    font-size: 3rem;
-    font-style: none;
-    text-align: center;
-    margin-bottom: 15px;
+    height: 50px;
 }
 
 .nav-item1, .nav-item2, .nav-item3 {
     font-size: 1.2rem;
-    text-align: center;
-    font-weight: 700;
+    font-weight: 400;
 
-}
-
-.nav-item1 {
-    text-align: right;
-}
-
-.nav-item3 {
-    text-align: left;
 }
 
 a:link {
