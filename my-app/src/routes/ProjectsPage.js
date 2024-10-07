@@ -47,8 +47,8 @@ function ProjectsPage() {
         <Project id="project-4"
             title="MonkeyCar"
             type="Front end"
-            description="bla bla"
-            tech="3"
+            description="MONKEyCAR is a web-based application aimed at teaching children to code in an engaging way by programming a real smart car. Users create sequences of actions, like moving forward or turning, through drag-and-drop code blocks, which the car then executes. The app introduces basic programming concepts such as loops in a fun and interactive environment."
+            tech="HTML, CSS, JavaScript, C++, and MQTT."
         />
 
         {/* Project 5 */}

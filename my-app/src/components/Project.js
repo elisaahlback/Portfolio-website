@@ -6,9 +6,9 @@ const Project = ({title, type, description, tech}) => {
     return (
         <div className="row project-row d-flex align-items-start justify-content-center flex-wrap">
             <div className="col-4 d-flex align-items-center justify-content-left">
-                <div className="project-visuals d-flex align-items-center justify-content-center">
+                <a href="/ProjectVisuals" className="project-visuals ">
                     Project visuals
-                </div>
+                </a>
             </div>
             <div className="col-8 d-flex project-text flex-column align-items-start">
                 <div className="project-title">{title}</div>
