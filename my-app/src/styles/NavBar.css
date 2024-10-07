@@ -1,39 +1,42 @@
 nav {
-    width: 100%;
-    padding: 0 20px;
+    width: 100vw;
+    height: 7rem;
+    scroll-snap-align: start;
 }
 
 #nav-logo {
     font-family: BlackMango;
     color: #212427;
     height: 50px;
+    transition: transform .9s ease-in-out;
 }
 
-.nav-item1, .nav-item2, .nav-item3 {
-    font-size: 1.2rem;
-    font-weight: 400;
-
+#nav-logo:hover {
+    transform: rotate(270deg);
 }
 
-a:link {
+.nav-item, #nav-button {
+    font-size: 1rem;
+    font-weight: 380;
+    background-color: transparent;
+    border: none;
     text-decoration: none;
-        color: #212427;
-
 }
 
-a:visited {
-    text-decoration: none;
-    color: #212427;
-
+#nav-button:hover {
+    color: #ec7e82;
+    background-color: transparent;
+    cursor: pointer;
 }
 
-a:hover {
-    text-decoration: none;
-    color: #212427;
-}
 
-a:active {
+.nav-item a:visited {
     text-decoration: none;
     color: #212427;
+}
 
+.nav-item a:active {
+    text-decoration: none;
+    color: #212427;
+    background-color: transparent;
 }

@@ -1,21 +1,38 @@
 import React from "react";
 import "../styles/NavBar.css";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import MainPage from "../routes/MainPage.js";
+import ProjectsPage from "../routes/ProjectsPage.js";
+import ContactPage from "../routes/ContactPage.js";
 
 const NavBar = () => {
     return (
     <nav class="nav">
-        <div class="container">
+        <div class="container p-5">
         <b-row class="row">
             <b-col class="nav-title col-2 d-flex align-items-center">
-                <a href="/" class="nav-logo"><img id="nav-logo" src={require('.././assets/nav-logo.png')} /></a>
+                <RouterLink to="/" class="nav-logo">
+                    <img id="nav-logo" src={require('.././assets/nav-logo.png')} />
+                </RouterLink>
             </b-col>
             
-            <div class="nav-item1 col col-2 d-flex justify-content-center align-items-center"><a href="/">about me</a>
-            </div>
-            <div class="nav-item2 col col-2 d-flex justify-content-center align-items-center"><a href="/Projects">projects</a>
-            </div>
-            <div class="nav-item3 col col-2 d-flex justify-content-center align-items-center"><a href="/Contact">contact</a>
+            <div className="col d-flex justify-content-end">
+                <div className="nav-item d-flex align-items-center mx-3">
+                    <RouterLink to="/#about-me-rectangle" smooth={true} duration={10}>
+                        <button id="nav-button">about me</button>
+                    </RouterLink>
+                </div>
+                <div className="nav-item d-flex align-items-center mx-3">
+                    <RouterLink to="/ProjectsPage" id="nav-button">
+                        projects
+                        </RouterLink>
+                </div>
+                <div className="nav-item d-flex align-items-center mx-3">
+                    <RouterLink to="/ContactPage" id="nav-button">
+                        contact
+                        </RouterLink>
+                </div>
             </div>
         </b-row>
 

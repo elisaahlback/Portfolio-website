@@ -11,23 +11,47 @@
 /*      */
 
 
+/* Overall styling */
+
+::selection {
+  background-color: #EFD4B9; /* Your chosen highlight color */
+  color: #000000; /* Your chosen text color */
+}
+
+::-moz-selection {
+  background-color: #EFD4B9; /* Same highlight color for Firefox */
+  color: #000000; /* Same text color for Firefox */
+}
+
 .App {
   background-image: url('.././assets/Background.svg');
-  /*aspect-ratio: 960/300;*/
-  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
-  font-family: Outfit;
+  font-family: 'Helvetica Neue', sans-serif;
   color: #212427;
-  padding-top: 40px;
-  /*padding: 40px 180px 0 180px;*/
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
-.hero-row {
-  height: 680px;
-  padding: 40px 180px 40px 180px;
+.hero-full-screen, .about-me-rectangle, .projects-row {
+  scroll-snap-align: start;
+}
+
+
+/* Hero styling */
+
+.hero-full-screen {
+  height: 100vh; /* Occupies 100% of the viewport height */
+  display: flex; /* Flexbox to center content */
+  align-items: center; /* Vertically centers the content */
+  justify-content: center; /* Horizontally centers the content */
 }
 
 .name {
@@ -38,73 +62,8 @@
   color: #212427;
 }
 
-.about-me-left-text {
-  font-weight: 800;
-  font-size: 70px;
-  line-height: 115%;
-  color: #F8F3E9;
-  width: 70%;
-}
 
-.aboutme-row {
-  height: 640px;
-  background-color: #212427;
-  color: #F8F4EA;
-  padding-left: 0;
-  padding: 20px 180px 20px 180px;
-}
-
-#profile-pic {
-  height: 350px;
-}
-
-#intro-title {
-  font-weight: 800;
-  font-size: 45px;
-}
-
-p {
-  font-size: 20px;
-}
-
-#location-icon {
-  height: 30px;
-}
-
-#toolbox {
-  background-color: #ECE8DD;
-  width: 100%;
-  height: 80px;
-  border-radius: 60px;
-  margin: 20px 0;
-}
-
-#tool-icon {
-  height: 50px;
-  margin: 0 100px;
-}
-
-.projects-row {
-  width: 100%;
-}
-
-.project-row {
-  padding: 150px 180px 20px 180px;
-}
-
-#projects-title {
-  align-items: left;
-  font-size: 65px;
-  font-weight: 800;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-hr {
-  color: #212427;
-  width: 2000px;
-  height: 20px;
-}
+/* About me section styling */
 
 .about-me-rectangle {
   width: 100vw;    /* Full width of the viewport */
@@ -115,7 +74,90 @@ hr {
   background-color: #212427;
 }
 
+.about-me-left-text {
+  font-weight: 800;
+  font-size: 5vw;
+  color: #F8F3E9;
+  margin-left: 7vw;
+  margin-right: 60px;
+}
+
 .about-me-right {
   border-style: solid;
   background-color: transparent;
+}
+
+.about-me-right-text {
+  font-size: 1rem;
+  font-weight: 380;
+  margin-right: 7vw;
+}
+
+
+/* Projects row styling */
+
+.projects-row {
+  padding: 50px 5vw 20px 5vw;
+  height: 100vh;
+  width: 100%;
+}
+
+.projects-title {
+  display: flex;
+  font-size: 5vw;
+  font-weight: 800;
+  margin-left: 2vw;
+  padding-bottom: 10px;
+}
+
+.projects-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Distributes the project items evenly */
+  margin: 30px auto; /* Centers the block */
+  padding: 0; /* Remove extra padding */
+  max-width: 1200px; /* Limits the width of the project block */
+}
+
+.project-item {
+  background-color: rgba(33, 36, 39, 0.33);
+  border-radius: 200px;
+  border-width: 1.5px;
+  height: 460px;
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically and horizontally centers the content */
+  margin: 2vh;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.project-item:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adds a shadow effect on hover */
+}
+
+a {
+  color: #F8F3E9;
+}
+
+.more-projects-button {
+  display: flex;
+  align-items: center; /* Vertically centers the content */
+  justify-content: center;
+  background-color: #212427;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 380;
+  color: #F8F3E9;
+  height: 2.8rem;
+  width: 7.8vw;
+  border: none;
+  text-decoration: none;
+}
+
+.more-projects-button:hover {
+  background-color: #33383b; /* Darkens the button on hover */
+  color: #F8F3E9;
 }

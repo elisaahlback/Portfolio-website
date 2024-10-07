@@ -1,62 +1,94 @@
 import '.././styles/MainPage.css';
-import React from "react";
+import React, {useEffect} from "react";
+import { useLocation } from "react-router-dom"; // to get the URL to scroll down to about me section
 import NavBar from '.././components/NavBar';
-import FigmaLogo from '.././assets/figma.svg';
-import Line from '.././components/Line';
 import Footer from '.././components/Footer';
-import { Link, Element } from 'react-scroll';
+import { Element, scroller } from 'react-scroll';
 
 function MainPage() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Check if the user came to the page with a hash in the URL (e.g., /#about-me)
+    if(location.hash === "#about-me-rectangle") {
+      // Delay the scroll until the component is fully rendered
+      setTimeout(() => {
+        scroller.scrollTo("about-me-rectangle", {
+          duration: 0,
+          delay: 0,
+          smooth: "easeInOutQuart"
+        });
+      }, 100); // Wait for 100ms to ensure the page has rendered
+    }
+  }, [location]); // Watch for changes in the location to trigger scrolling
+
   return (
     <div className="App">
-      <NavBar></NavBar>
-      <div class="row hero-row d-flex align-items-center">
-        <div class="col col-12 ">
+      <NavBar />
+      <div class="row d-flex align-items-center hero-full-screen">
+        <div class="col">
           <h1 class="name col-3">
              elisa ahlbäck
           </h1>
         </div>
       </div>
 
-      <div className="about-me-rectangle">
-      <div className="container-fluid h-100">
-      <div className="row h-100">
-        <div className="col-6 about-me-left d-flex justify-content-center align-items-center">
-        <h1 class="about-me-left-text">
-            A software engineering graduate, with a passion for front-end development and UX.
-          </h1>
-        </div>
-        <div className="col-6 about-me-right">
-          <div class="row">
-            <div class="col">
-              <p>A half-English, half-Swedish creative thinker, passionate about design and creating things?. After growing up in Spain, I moved to Sweden to pursue a Software Engineering & Management bachelors degree, which I’m currently in the second year.</p><br/>
-              <p>I strive to continuously improve and gain further experience, as well as enjoying learning from others around me, being easily adaptable to a team or individual work environments.</p>
+      <Element name="about-me-rectangle" className="about-me-rectangle">
+        <div className="container-fluid h-100">
+          <div className="row h-100">
+            <div className="col-6 about-me-left d-flex justify-content-center align-items-center">
+              <h1 class="about-me-left-text">
+                A software engineering graduate, with a passion for front-end development and UI&UX.
+              </h1>
+            </div>
+            <div className="col-6 about-me-right">
+              <div class="row">
+                <div class="col about-me-right-text">
+                  Hi there! I'm Elisa, a half-English, half-Swedish creative thinker, passionate about design, problem-solving and trying new things.
+                  <br/> After growing up in Spain, I moved to Sweden to pursue a Software Engineering & Management bachelors degree, which I’m currently in the second year.
+                  <br/>I strive to continuously improve and gain further experience, as well as enjoying learning from others around me, being easily adaptable to a team or individual work environments.
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      </div>
-      </div>
-        
-      
+      </Element>
 
-      <div class="row projects-row">
-        <div class="row project-row">
-          <div class="col col-12 d-flex justify-content-left">
-            <h2 id="projects-title">
+      <div className="projects-row">
+        <div className="container-fluid h-100">
+          <div className="row">
+            <div className="col d-flex justify-content-start projects-title">
               Projects
-            </h2>
+            </div>
+          </div>
+          <div className="row justify-content-center">
+            <div className="projects-block d-flex align-items-center justify-content-center flex-wrap">
+              <div className="project-item d-flex align-items-center justify-content-center">
+                Project 1
+              </div>
+              <div className="project-item d-flex align-items-center justify-content-center">
+                Project 2
+              </div>
+              <div className="project-item d-flex align-items-center justify-content-center">
+                Project 3
+              </div>
+              <div className="project-item d-flex align-items-center justify-content-center">
+                Project 4
+              </div>
+              <div className="project-item d-flex align-items-center justify-content-center">
+                Project 5
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col d-flex align-items-center justify-content-center">
+              <a href="/ProjectsPage" class="more-projects-button">View more</a>
+            </div>
           </div>
         </div>
+      </div>  
+      
 
-        <div class="row">
-          <Line></Line>
-        </div>
-        
-
-
-  
-    </div>
     <Footer></Footer>
     </div>
   );

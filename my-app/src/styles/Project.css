@@ -1,0 +1,57 @@
+/* Imports */
+
+@font-face {
+    font-family: BlackMango;
+    src: url(.././assets/Black\ Mango\ Black.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*      */
+
+
+/* Overall styling */
+
+.project-row {
+    height: 40vh;
+    width: 100vw;
+    padding-left: 7vw;
+    padding-right: 7vw;
+}
+
+.project-row:hover {
+    background-color: rgba(33, 36, 39, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-text {
+    padding-top: 10px;
+}
+
+.project-visuals {
+    background-color: rgba(33, 36, 39, 0.33);
+    border-radius: 10px;
+    border-width: 1.5px;
+    height: 35vh;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically and horizontally centers the content */
+    margin: 2vh;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.project-title {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.project-type {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.project-description {
+    font-size: 1rem;
+}

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from './routes/MainPage';
-import Projects from './routes/Projects';
-import Contact from './routes/Contact';
+import ProjectsPage from './routes/ProjectsPage';
+import ContactPage from './routes/ContactPage';
 
 function App() {
     return (
@@ -10,8 +10,8 @@ function App() {
             <div className="content">
                 <Routes>
                     <Route exact path="/" element={ <MainPage /> } />
-                    <Route path="/Projects" element={ <Projects /> } />
-                    <Route path="/Contact" element={ <Contact /> } />
+                    <Route path="/ProjectsPage" element={ <ProjectsPage /> } />
+                    <Route path="/ContactPage" element={ <ContactPage /> } />
                 </Routes>
             </div>
         </div>

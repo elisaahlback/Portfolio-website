@@ -1,0 +1,39 @@
+/* Imports */
+
+@font-face {
+    font-family: BlackMango;
+    src: url(.././assets/Black\ Mango\ Black.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*      */
+
+
+/* Overall styling */
+
+.App {
+    background-image: url('.././assets/Background.svg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #212427;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+.projects-page-title {
+    margin: 20px;
+    font-size: 4.5vw;
+    display: flex;
+    font-weight: 800;
+    margin-left: 2vw;
+    padding-bottom: 10px;
+}
