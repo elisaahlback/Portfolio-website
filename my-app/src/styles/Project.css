@@ -60,6 +60,11 @@
     font-size: 1rem;
 }
 
+.project-tech {
+    font-size: 1rem;
+    font-style: italic;
+}
+
 .link {
     text-decoration: none;
 }

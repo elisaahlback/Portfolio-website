@@ -24,7 +24,6 @@
     color: #212427;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    height: 100%;
     margin: 0px;
     padding: 0px;
   }

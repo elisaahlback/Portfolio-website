@@ -17,6 +17,7 @@ const rightArrowStyles = {
   color: "#fff",
   zIndex: 1,
   cursor: "pointer",
+  color: "#212427",
 };
 
 const leftArrowStyles = {
@@ -28,6 +29,7 @@ const leftArrowStyles = {
   color: "#fff",
   zIndex: 1,
   cursor: "pointer",
+  color: "#212427",
 };
 
 const sliderStyles = {
@@ -44,9 +46,10 @@ const dotStyle = {
   margin: "0 3px",
   cursor: "pointer",
   fontSize: "20px",
+  color: "#212427",
 };
 
-const ImageSlider = ({ slides }) => {
+const ImageSlider = ({ slides, slide_titles }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const goToPrevious = () => {
       const isFirstSlide = currentIndex === 0;
@@ -88,6 +91,9 @@ const ImageSlider = ({ slides }) => {
             </div>
           ))}
         </div>
+        <p class="project-description">
+          {slides[currentIndex].title}
+        </p>
       </div>
     );
   };
