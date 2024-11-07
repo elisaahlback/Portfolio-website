@@ -45,8 +45,10 @@ function MainPage() {
               <div class="row">
                 <div class="col about-me-right-text">
                   Hi there! I'm Elisa, a half-English, half-Swedish creative thinker, passionate about design, problem-solving and trying new things.
-                  <br/> After growing up in Spain, I moved to Sweden to pursue a Software Engineering & Management bachelors degree, which I’m currently in the second year.
-                  <br/>I strive to continuously improve and gain further experience, as well as enjoying learning from others around me, being easily adaptable to a team or individual work environments.
+                  <br/> After growing up in Spain, I moved to Sweden to pursue a Software Engineering & Management bachelors degree, a conjoined program between Chalmers and Gothenburg University, from which I graduated in May 2024.
+                  <br/>I strive to continuously improve and gain further experience, as well as enjoy learning from others around me, being easily adaptable to a team or individual work environments.
+                  <br/><br/>Passionate and detail-oriented front-end designer with a software engineering degree, driven by a love for problem-solving and crafting visually engaging, user-friendly designs. Known for a collaborative mindset and adaptability, excited to bring fresh ideas and a positive attitude to a dynamic team.
+
                 </div>
               </div>
             </div>
@@ -64,25 +66,25 @@ function MainPage() {
           <div className="row justify-content-center">
             <div className="projects-block d-flex align-items-center justify-content-center flex-wrap">
               <div className="project-item d-flex align-items-center justify-content-center">
-                Project 1
+                BEMify
               </div>
               <div className="project-item d-flex align-items-center justify-content-center">
-                Project 2
+                Dentistimo
               </div>
               <div className="project-item d-flex align-items-center justify-content-center">
-                Project 3
+                TimeSync
               </div>
               <div className="project-item d-flex align-items-center justify-content-center">
-                Project 4
+                MonkeyCar
               </div>
               <div className="project-item d-flex align-items-center justify-content-center">
-                Project 5
+                Portfolio website
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col d-flex align-items-center justify-content-center">
-              <a href="/ProjectsPage" class="more-projects-button">View more</a>
+              <a href="/Projects" class="more-projects-button">View more</a>
             </div>
           </div>
         </div>

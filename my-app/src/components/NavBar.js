@@ -3,7 +3,7 @@ import "../styles/NavBar.css";
 import { Link as RouterLink } from "react-router-dom";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import MainPage from "../routes/MainPage.js";
-import ProjectsPage from "../routes/ProjectsPage.js";
+import Projects from "../routes/Projects.js";
 import ContactPage from "../routes/ContactPage.js";
 
 const NavBar = () => {
@@ -24,7 +24,7 @@ const NavBar = () => {
                     </RouterLink>
                 </div>
                 <div className="nav-item d-flex align-items-center mx-3">
-                    <RouterLink to="/ProjectsPage" id="nav-button">
+                    <RouterLink to="/Projects" id="nav-button">
                         projects
                         </RouterLink>
                 </div>
