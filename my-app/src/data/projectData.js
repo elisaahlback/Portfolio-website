@@ -7,8 +7,8 @@ const projects = [
         tech: "Vue.js, JavaScript, HTML, Node.js, and Figma.",
         images: [
             { url: "/sliderImages/Bemify1.png", title:"Figma: Login"},
-            { url: "/sliderImages/Bemify2.png", title:"Figma: Create account"},
-            { url: "/sliderImages/Bemify3.png", title:"Figma: Main page"},
+            { url: "/sliderImages/Bemify2.png", title:"Figma: Create account Page"},
+            { url: "/sliderImages/Bemify3.png", title:"Figma: Main Page"},
             { url: "/sliderImages/Bemify4.png", title:"Figma: Search"},
             { url: "/sliderImages/Bemify5.png", title:"Figma: Upload"},
             { url: "/sliderImages/Bemify6.png", title:"Figma: Profile"},
