@@ -14,7 +14,7 @@ function ProjectInfo() {
     const slides = project.images;
 
     const containerStyles = {
-        width: "80%",
+        width: "90%",
         height: "90%",
         margin: "0 auto",
       };

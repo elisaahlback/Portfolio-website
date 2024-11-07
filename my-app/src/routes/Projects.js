@@ -33,7 +33,9 @@ function Projects() {
             </ul>
         </div>
 
-        More to come!
+        <p class="project-type">
+            More to come!
+        </p>
 
     <Footer></Footer>
     </div>
