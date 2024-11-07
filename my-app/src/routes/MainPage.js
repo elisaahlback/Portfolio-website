@@ -4,8 +4,12 @@ import { useLocation } from "react-router-dom"; // to get the URL to scroll down
 import NavBar from '.././components/NavBar';
 import Footer from '.././components/Footer';
 import { Element, scroller } from 'react-scroll';
+import { Link } from 'react-router-dom';
+import projectData from '../data/projectData';
 
-function MainPage() {
+
+const MainPage = ({project}) => {
+  
   const location = useLocation();
 
   useEffect(() => {
@@ -65,21 +69,11 @@ function MainPage() {
           </div>
           <div className="row justify-content-center">
             <div className="projects-block d-flex align-items-center justify-content-center flex-wrap">
-              <div className="project-item d-flex align-items-center justify-content-center">
-                BEMify
-              </div>
-              <div className="project-item d-flex align-items-center justify-content-center">
-                Dentistimo
-              </div>
-              <div className="project-item d-flex align-items-center justify-content-center">
-                TimeSync
-              </div>
-              <div className="project-item d-flex align-items-center justify-content-center">
-                MonkeyCar
-              </div>
-              <div className="project-item d-flex align-items-center justify-content-center">
-                Portfolio website
-              </div>
+                {projectData.map((project) => (
+                    <Link to={`/Projects/${project.projectid}`} className="link project-item">
+                        {project.title}
+                    </Link>
+                ))}
             </div>
           </div>
           <div className="row">

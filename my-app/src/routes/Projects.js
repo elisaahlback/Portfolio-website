@@ -19,17 +19,19 @@ function Projects() {
             </div>
         </div>
         
-        <ul>
-            {projectData.map((project) => (
-                <Project
-                    title={project.title}
-                    type={project.type}
-                    description={project.description}
-                    tech={project.tech}
-                    projectid={project.projectid}
-                />
-            ))}
-        </ul>
+        <div class="row">
+            <ul>
+                {projectData.map((project) => (
+                    <Project
+                        title={project.title}
+                        type={project.type}
+                        description={project.description}
+                        tech={project.tech}
+                        projectid={project.projectid}
+                    />
+                ))}
+            </ul>
+        </div>
 
         More to come!
 

@@ -131,11 +131,14 @@
   margin: 2vh;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  font-weight: 600;
+  color: #212427;
 }
 
 .project-item:hover {
   transform: scale(1.05); /* Slight zoom on hover */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adds a shadow effect on hover */
+  color: #212427;
 }
 
 a {

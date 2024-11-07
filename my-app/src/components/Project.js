@@ -7,11 +7,12 @@ import { Link } from 'react-router-dom'
 
 const Project = ({title, type, description, tech, projectid}) => {
     return (
+    <Link to={`/Projects/${projectid}`} className="link">
         <div className="row project-row d-flex align-items-start justify-content-center flex-wrap">
             <div className="col-4 d-flex align-items-center justify-content-left">
-                <Link to={`/Projects/${projectid}`} className="project-visuals ">
-                    Project visuals
-                </Link>
+                <div className="project-visuals ">
+                
+                </div>
             </div>
             <div className="col-8 d-flex project-text flex-column align-items-start">
                 <div className="project-title">{title}</div>
@@ -20,6 +21,7 @@ const Project = ({title, type, description, tech, projectid}) => {
                 <div className="project-tech">{tech}</div>
             </div>
         </div>
+    </Link>
     );
 };
 

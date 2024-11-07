@@ -15,7 +15,7 @@ const projects = [
             { url: "/sliderImages/Bemify7.png", title:"Figma: Playlist"},
             { url: "/sliderImages/Bemify8.png", title:"Figma: Settings"},
         ],
-        projectid: "BEMify"
+        projectid: "bemify"
     },
     {
         title: "Dentistimo",
@@ -32,7 +32,7 @@ const projects = [
             { url: "", title:""},
             { url: "", title:""},
         ],
-        projectid: "Dentistimo"
+        projectid: "dentistimo"
       
     },
     {
@@ -50,7 +50,7 @@ const projects = [
             { url: "", title:""},
             { url: "", title:""},
         ],
-        projectid: "TimeSync"
+        projectid: "timesync"
     },
     {
         title: "MonkeyCar",
@@ -67,10 +67,10 @@ const projects = [
             { url: "", title:""},
             { url: "", title:""},
         ],
-        projectid: "MonkeyCar"
+        projectid: "monkeycar"
     },
     {
-        title: "Portfolio website",
+        title: "Portfolio Website",
         type: "Front end",
         description: "This is a project focused on building a responsive, interactive portfolio website to showcase my design and development skills, highlighting my personal brand, projects, and experience.",
         tech: "React, Javascript, Bootstrap, HTML, CSS, and Figma.",
@@ -83,7 +83,7 @@ const projects = [
             { url: "/sliderImages/Portfolio6.png", title:"Figma: Contact Page"},
             { url: "/sliderImages/Portfolio7.png", title:"Figma: Main Page 2nd iteration"},
         ],
-        projectid: "PortfolioWebsite"
+        projectid: "portfoliowebsite"
     }
   ];
   

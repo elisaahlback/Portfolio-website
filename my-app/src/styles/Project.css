@@ -17,11 +17,14 @@
     width: 100vw;
     padding-left: 7vw;
     padding-right: 7vw;
+    color: #212427;
+    text-decoration: none;
 }
 
 .project-row:hover {
     background-color: rgba(33, 36, 39, 0.04);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
 }
 
 .project-text {
@@ -29,9 +32,11 @@
 }
 
 .project-visuals {
-    background-color: rgba(33, 36, 39, 0.33);
+    background-color: rgba(33, 36, 39, 0);
+    border-style: solid;
+    border-color: #212427;
     border-radius: 10px;
-    border-width: 1.5px;
+    border-width: 1px;
     height: 35vh;
     width: 60vw;
     display: flex;
@@ -39,7 +44,6 @@
     align-items: center; /* Vertically and horizontally centers the content */
     margin: 2vh;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
 }
 
 .project-title {
@@ -54,4 +58,8 @@
 
 .project-description {
     font-size: 1rem;
+}
+
+.link {
+    text-decoration: none;
 }
