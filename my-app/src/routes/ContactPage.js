@@ -1,13 +1,34 @@
 import '.././styles/ContactPage.css';
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import { ReactComponent as PhoneIcon } from '.././assets/phone.svg';
 import { ReactComponent as EmailIcon } from '.././assets/mail.svg';
 import { ReactComponent as LinkedInIcon } from '.././assets/linkedin.svg';
 import { ReactComponent as GitHubIcon } from '.././assets/github.svg';
+import emailjs from '@emailjs/browser';
 
-function Contact() {
+export const Contact = () => {
+    const form = useRef();
+
+    const sendEmail = (event) => {
+        event.preventDefault();
+
+        emailjs.sendForm('service_1a7yfhn', 'template_hsdydij', form.current, {
+            publicKey: 'Fiw-zOtmspoiilNGQ',
+        })
+          .then(
+            () => {
+            console.log('Email sent!');
+            alert('Email sent successfully!');
+          }, (error) => {
+            console.error('Error sending email:', error.text);
+            alert('Oops! Something went wrong.');
+          },
+        );
+    };
+
+
   return (
     <div className="App" id="contact-page">
         <NavBar />
@@ -18,28 +39,30 @@ function Contact() {
         </div>
 
         <div class="row contact-row align-items-start justify-content-center flex-wrap">
-            <div class="col-7 flex-column align-items-start">
-                <div class="row send-message-row justify-content-center mb-3">
-                    <div class="col-6 name-label">
-                        Name
-                        <input class="form-control" type="text" id="name-input"/>
+            <div className="col-7 flex-column align-items-start">
+                <form ref={form} id="contact-form" onSubmit={sendEmail}>
+                    <div className="row send-message-row justify-content-center mb-3">
+                        <div class="col-6 name-label">
+                            Name
+                            <input class="form-control" type="text" name="name" required />
+                        </div>
+                        <div class="col-6 email-label">
+                            E-mail
+                            <input class="form-control" type="email" name="email" required />
+                        </div>
                     </div>
-                    <div class="col-6 email-label">
-                        E-mail
-                        <input class="form-control" type="text" id="email-input"/>
+                    <div class="row send-message-row justify-content-center mb-3">
+                        <div class="col-12">
+                            Message
+                            <textarea class="form-control text-start" name="message" required />
+                        </div>
                     </div>
-                </div>
-                <div class="row send-message-row justify-content-center mb-3">
-                    <div class="col-12">
-                        Message
-                        <input class="form-control text-start" type="text" id="message-input"/>
+                    <div class="row send-button-row justify-content-end">
+                        <div class="col-12 text-end">
+                            <button type="submit" class="send-button">Send</button>
+                        </div>
                     </div>
-                </div>
-                <div class="row send-button-row justify-content-end">
-                    <div class="col-12 text-end">
-                        <a class="send-button">Send</a>
-                    </div>
-                </div>
+                </form>
             </div>
             <div class="col-5 d-flex flex-column align-items-center justify-content-center my-auto">
                 <div className="contact-info-box">

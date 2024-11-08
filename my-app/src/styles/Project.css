@@ -16,7 +16,7 @@
     height: 40vh;
     width: 100vw;
     padding-left: 7vw;
-    padding-right: 7vw;
+    margin-right: 7vw;
     color: #212427;
     text-decoration: none;
 }
@@ -63,6 +63,7 @@
 .project-tech {
     font-size: 1rem;
     font-style: italic;
+    font-weight: 500;
 }
 
 .link {

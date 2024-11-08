@@ -6,6 +6,7 @@ const slideStyles = {
   borderRadius: "10px",
   backgroundSize: "cover",
   backgroundPosition: "center",
+  textShadow: "0 6px 12px rgba(0, 0, 0, 0.2)", //not working
 };
 
 const rightArrowStyles = {

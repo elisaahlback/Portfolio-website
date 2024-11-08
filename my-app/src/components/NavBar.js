@@ -29,7 +29,7 @@ const NavBar = () => {
                         </RouterLink>
                 </div>
                 <div className="nav-item d-flex align-items-center mx-3">
-                    <RouterLink to="/ContactPage" id="nav-button">
+                    <RouterLink to="/Contact" id="nav-button">
                         contact
                         </RouterLink>
                 </div>
