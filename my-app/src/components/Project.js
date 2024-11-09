@@ -5,13 +5,17 @@ import { Link } from 'react-router-dom'
 
 
 
-const Project = ({title, type, description, tech, projectid}) => {
+const Project = ({title, type, description, tech, image1, image2, projectid}) => {
     return (
     <Link to={`/Projects/${projectid}`} className="link">
         <div className="row project-row d-flex align-items-start justify-content-center flex-wrap">
             <div className="col-4 d-flex align-items-center justify-content-left">
-                <div className="project-visuals ">
-                
+                <div className="project-visuals">
+                    <img src={image1} alt={`${title} Visual 1`} className="project-image project-image-1"/>
+                    <img src={image2} alt={`${title} Visual 2`} className="project-image project-image-2"/>
+                    <p id="view-more">
+                        View more
+                    </p>
                 </div>
             </div>
             <div className="col-8 d-flex project-text flex-column align-items-start">

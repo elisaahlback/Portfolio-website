@@ -48,7 +48,7 @@ function ProjectInfo() {
                     </div>
                     <div class="row">
                         <div class="col project-description">
-                            {project.description}
+                            {project.description}<br/>Tech used: 
                         </div>
                     </div>
                     <div class="row">

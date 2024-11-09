@@ -27,6 +27,8 @@ function Projects() {
                         type={project.type}
                         description={project.description}
                         tech={project.tech}
+                        image1={project.images[2].url}
+                        image2={project.images[3].url}
                         projectid={project.projectid}
                     />
                 ))}
