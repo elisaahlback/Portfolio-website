@@ -1,23 +1,38 @@
 import '.././styles/MainPage.css';
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom"; // to get the URL to scroll down to about me section
 import NavBar from '.././components/NavBar';
 import Footer from '.././components/Footer';
 import { Element, scroller } from 'react-scroll';
 import { Link } from 'react-router-dom';
 import projectData from '../data/projectData';
+import ContactPage from '../components/ContactPage';
 
 
-const MainPage = ({project}) => {
+const MainPage = () => {
   
   const location = useLocation();
 
   useEffect(() => {
     // Check if the user came to the page with a hash in the URL (e.g., /#about-me)
-    if(location.hash === "#about-me-rectangle") {
+    if(location.hash === "#aboutme") {
       // Delay the scroll until the component is fully rendered
       setTimeout(() => {
-        scroller.scrollTo("about-me-rectangle", {
+        scroller.scrollTo("aboutme", {
+          duration: 0,
+          delay: 0,
+          smooth: "easeInOutQuart"
+        });
+      }, 100); // Wait for 100ms to ensure the page has rendered
+    }
+  }, [location]); // Watch for changes in the location to trigger scrolling
+
+  useEffect(() => {
+    // Check if the user came to the page with a hash in the URL (e.g., /#about-me)
+    if(location.hash === "#contact") {
+      // Delay the scroll until the component is fully rendered
+      setTimeout(() => {
+        scroller.scrollTo("contact", {
           duration: 0,
           delay: 0,
           smooth: "easeInOutQuart"
@@ -37,7 +52,7 @@ const MainPage = ({project}) => {
         </div>
       </div>
 
-      <Element name="about-me-rectangle" className="about-me-rectangle">
+      <Element name="aboutme" className="aboutme">
         <div className="container-fluid h-100">
           <div className="row h-100">
             <div className="col-6 about-me-left d-flex justify-content-center align-items-center">
@@ -70,8 +85,23 @@ const MainPage = ({project}) => {
           <div className="row justify-content-center">
             <div className="projects-block d-flex align-items-center justify-content-center flex-wrap">
                 {projectData.map((project) => (
-                    <Link to={`/Projects/${project.projectid}`} className="link project-item">
+                    <Link to={`/Projects/${project.projectid}`} className="link project-item" key={project.projectid}>
                         {project.title}
+
+                        {/* Horizontal images */}
+                        <div class="image-set bottom-left">
+                          {project.images.map((image, index) => (
+                            <img src={image.url} alt={image.title} key={index} class="slanted-image" />
+                          ))}
+                        </div>
+
+                        {/* Vertical images */}
+                        <div class="image-set top-right">
+                          {project.images.map((image, index) => (
+                            <img src={image.url} alt={image.title} key={index} class="slanted-image" />
+                          ))}
+                        </div>
+
                     </Link>
                 ))}
             </div>
@@ -83,7 +113,12 @@ const MainPage = ({project}) => {
           </div>
         </div>
       </div>  
+
       
+      <Element name="contact" className="contact">
+        <ContactPage></ContactPage>    
+      </Element>
+    
 
     <Footer></Footer>
     </div>

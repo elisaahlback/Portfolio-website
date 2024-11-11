@@ -4,7 +4,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import MainPage from "../routes/MainPage.js";
 import Projects from "../routes/Projects.js";
-import ContactPage from "../routes/ContactPage.js";
+import ContactPage from "./ContactPage.js";
 
 const NavBar = () => {
     return (
@@ -19,19 +19,19 @@ const NavBar = () => {
             
             <div className="col d-flex justify-content-end">
                 <div className="nav-item d-flex align-items-center mx-3">
-                    <RouterLink to="/#about-me-rectangle" smooth={true} duration={10}>
+                    <RouterLink to="/#aboutme" smooth={true} duration={10}>
                         <button id="nav-button">about me</button>
                     </RouterLink>
                 </div>
                 <div className="nav-item d-flex align-items-center mx-3">
                     <RouterLink to="/Projects" id="nav-button">
                         projects
-                        </RouterLink>
+                    </RouterLink>
                 </div>
                 <div className="nav-item d-flex align-items-center mx-3">
-                    <RouterLink to="/Contact" id="nav-button">
+                    <RouterLink to="/#contact" smooth={true} duration={100} id="nav-button">
                         contact
-                        </RouterLink>
+                    </RouterLink>
                 </div>
             </div>
         </b-row>
