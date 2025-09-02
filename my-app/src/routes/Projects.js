@@ -3,7 +3,6 @@ import '.././styles/ProjectsPage.css';
 import React from "react";
 import NavBar from '../components/NavBar';
 import FigmaLogo from '.././assets/figma.svg';
-import Line from '../components/Line';
 import Footer from '../components/Footer';
 import { Link, Element } from 'react-scroll';
 import Project from '../components/Project';

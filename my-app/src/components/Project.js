@@ -20,7 +20,7 @@ const Project = ({title, type, description, tech, image1, image2, projectid}) =>
             </div>
             <div className="col-8 d-flex project-text flex-column align-items-start">
                 <div className="project-title">{title}</div>
-                <div className="project-type">Role/s: {type}</div>
+                <div className="project-type">Role: {type}</div>
                 <div className="project-description">{description}</div>
                 <div className="project-tech">{tech}</div>
             </div>

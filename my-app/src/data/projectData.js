@@ -51,7 +51,7 @@ const projects = [
     {
         title: "TimeSync",
         type: "UI/UX Design, Prototyping, Interaction Design",
-        description: "I designed the user interface for TimeSync, a concept startup aimed at simplifying group scheduling for students. The app integrates users' personal calendars into a shared group calendar, streamlining event planning through color-coded availability and voting on time slots. Features like cross-platform calendar synchronization, in-app group chat, and a &quot;Memories&quot; section (to revisit shared events) were designed to enhance collaboration and social connection.",
+        description: "Designed the user interface for TimeSync, a concept startup aimed at simplifying group scheduling for students. The app integrates users' personal calendars into a shared group calendar, streamlining event planning through color-coded availability and voting on time slots. Features like cross-platform calendar synchronization, in-app group chat, and a &quot;Memories&quot; section (to revisit shared events) were designed to enhance collaboration and social connection.",
         extended_description: "",
         tech: "Figma",
         images: [

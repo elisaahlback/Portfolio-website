@@ -13,6 +13,9 @@ const MainPage = () => {
   
   const location = useLocation();
 
+  const pdfURL = "./assets/TechCV_ElisaAhlback.pdf";
+  
+
   useEffect(() => {
     // Check if the user came to the page with a hash in the URL (e.g., /#about-me)
     if(location.hash === "#aboutme") {
@@ -41,6 +44,12 @@ const MainPage = () => {
     }
   }, [location]); // Watch for changes in the location to trigger scrolling
 
+  const openPdf = () => {
+      window.open(pdfURL, "_blank");
+      console.log("hi");
+    }
+  
+
   return (
     <div className="App">
       <NavBar />
@@ -63,10 +72,11 @@ const MainPage = () => {
             <div className="col-6 about-me-right">
               <div class="row">
                 <div class="col about-me-right-text">
-                  Hi there! I'm Elisa, a half-English, half-Swedish creative thinker, passionate about design, problem-solving and trying new things.
+                  Hi there! I'm Elisa, a half-English, half-Swedish detail-oriented creative thinker, passionate about design and trying new things.
                   <br/> After growing up in Spain, I moved to Sweden to pursue a Software Engineering & Management bachelors degree, a conjoined program between Chalmers and Gothenburg University, from which I graduated in May 2024.
-                  <br/>I strive to continuously improve and gain further experience, as well as enjoy learning from others around me, being easily adaptable to a team or individual work environments.
-                  <br/><br/>Passionate and detail-oriented front-end designer with a software engineering degree, driven by a love for problem-solving and crafting visually engaging, user-friendly designs. Known for a collaborative mindset and adaptability, excited to bring fresh ideas and a positive attitude to a dynamic team.
+                  <br/><br /> I'm driven by a love for problem-solving and crafting visually engaging, user-friendly interfaces. Known for a collaborative mindset and adaptability - I strive to continuously improve and gain further experience, as well as enjoy learning from others around me. Excited to bring fresh ideas and a positive attitude to a dynamic team!
+                  <br/>
+                  <img src={require('.././assets/CVicon.png')} alt="CV icon" onClick={openPdf()} style={{ cursor: 'pointer'}} id="cv_icon"/>
 
                 </div>
               </div>
@@ -88,17 +98,23 @@ const MainPage = () => {
                     <Link to={`/Projects/${project.projectid}`} className="link project-item" key={project.projectid}>
                         {project.title}
 
-                        {/* Horizontal images */}
+                        {/* Top images */}
                         <div class="image-set bottom-left">
                           {project.images.map((image, index) => (
-                            <img src={image.url} alt={image.title} key={index} class="slanted-image" />
+                            <img src={image.url} alt={image.title} key={index} />
+                          ))}
+                          {project.images.map((image, index) => (
+                            <img src={image.url} alt={image.title} key={index} />
                           ))}
                         </div>
 
-                        {/* Vertical images */}
+                        {/* Bottom images */}
                         <div class="image-set top-right">
                           {project.images.map((image, index) => (
-                            <img src={image.url} alt={image.title} key={index} class="slanted-image" />
+                            <img src={image.url} alt={image.title} key={index} />
+                          ))}
+                          {project.images.map((image, index) => (
+                            <img src={image.url} alt={image.title} key={index} />
                           ))}
                         </div>
 
