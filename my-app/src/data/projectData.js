@@ -1,6 +1,25 @@
 
 const projects = [
     {
+        title: "Sylvia Website?",
+        type: "Front end",
+        description: "Developed a custom portfolio website tailored to the client's specifications and preferences. This includes implementing responsive design and modern UI to enhance user experience and build a functional, visually appealing website.",
+        extended_description: "",
+        tech: "Tailwind CSS and Figma. **",
+        images: [
+            { url: "/sliderImages/Sylvia1.png", title:"Landing Page"},
+            { url: "/sliderImages/Sylvia2.png", title:"Science Communication"},
+            { url: "/sliderImages/Sylvia3.png", title:"Media Didactics"},
+            { url: "/sliderImages/Sylvia4.png", title:"Publications"},
+            { url: "/sliderImages/Sylvia5.png", title:"Publications: highlighted book"},
+            { url: "/sliderImages/Sylvia6.png", title:"Vita"},
+            { url: "/sliderImages/Sylvia7.png", title:"Impressum"},
+
+        ],
+        github: "https://github.com/elisaahlback/Sylvia-Feil-Website",
+        projectid: "sylvia"
+    },
+    {
         title: "BEMify",
         type: "Front end",
         description: "BEMify is a full-stack web application designed for music streaming, allowing users to create accounts, follow favorite artists, and curate custom playlists. The platform also facilitates social interaction by letting users follow each other and share music. Key features include profile management, search functionality for music and users, and account settings. Built using a backend and frontend architecture, it provides a dynamic user experience with data sharing and interaction based on music preferences.",
@@ -50,7 +69,7 @@ const projects = [
     },
     {
         title: "TimeSync",
-        type: "UI/UX Design, Prototyping, Interaction Design",
+        type: "UI Design, Prototyping, Interaction Design",
         description: "Designed the user interface for TimeSync, a concept startup aimed at simplifying group scheduling for students. The app integrates users' personal calendars into a shared group calendar, streamlining event planning through color-coded availability and voting on time slots. Features like cross-platform calendar synchronization, in-app group chat, and a &quot;Memories&quot; section (to revisit shared events) were designed to enhance collaboration and social connection.",
         extended_description: "",
         tech: "Figma",
