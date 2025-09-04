@@ -31,12 +31,15 @@
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
-  font-family: 'Helvetica Neue', sans-serif;
   color: #212427;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   margin: 0px;
   padding: 0px;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
 }
 
 .hero-full-screen, .aboutme, .projects-row, .contact {
@@ -58,7 +61,7 @@
 .name {
   font-family: BlackMango;
   font-weight: 400;
-  font-size: 80px;
+  font-size: clamp(2rem, 8vw, 5rem);
   line-height: 100%;
   color: #212427;
   margin-left: 7.5vw;
@@ -127,7 +130,7 @@
   max-width: 1200px; /* Limits the width of the project block */
 }
 
-.project-item {
+/* .project-item {
   background-color: rgba(33, 36, 39, 0.33);
   border-radius: 200px;
   border-width: 1.5px;
@@ -136,12 +139,19 @@
   display: flex;
   justify-content: center;
   align-items: center; /* Vertically and horizontally centers the content */
-  margin: 2vh;
+  /*margin: 2vh;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   font-weight: 600;
   color: #212427;
   text-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+} */
+
+.project-item {
+  height: 460px;
+  width: 220px;
+  border-radius: 200px;
+  text-align: center;
 }
 
 .project-item:hover {
@@ -158,15 +168,16 @@ a {
   display: flex;
   align-items: center; /* Vertically centers the content */
   justify-content: center;
-  background-color: #212427;
-  border-radius: 10px;
+  color: #212427;
+  border: 1px solid #212427;
+  border-radius: 50px;
   font-size: 1rem;
   font-weight: 380;
-  color: #F8F3E9;
+  background-color: #F8F3E9;
   height: 2.8rem;
-  width: 7.8vw;
-  border: none;
+  width: 8vw;
   text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .more-projects-button:hover {
@@ -177,7 +188,7 @@ a {
 
 
 .image-set {
-  width: 25vw; 
+  width: 100%; 
   height: 25vh;
   position: relative;
   display: flex;
@@ -192,34 +203,3 @@ a {
   transition: transform 0.3s ease-in-out;
   position: absolute;
 }
-
-/* Set 1 - Move towards bottom-left (y = -x) */
-.image-set.bottom-left {
-  animation: slideBottomLeft 5s linear infinite;
-}
-
-@keyframes slideBottomLeft {
-  0% { 
-    transform: translate(-50, 0) rotate(-45deg);;
-  }
-  100% {
-    transform: translate(-200%, 200%) rotate(-45deg);;
-  }
-}
-
-/* Set 2 - Move towards top-right (y = x) */
-.image-set.top-right {
-  animation: slideTopRight 5s linear infinite;
-}
-
-
-@keyframes slideTopRight {
-  0% { 
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(200%, -200%);
-  }
-}
-
-

@@ -5,7 +5,7 @@ const projects = [
         type: "Front end",
         description: "Developed a custom portfolio website tailored to the client's specifications and preferences. This includes implementing responsive design and modern UI to enhance user experience and build a functional, visually appealing website.",
         extended_description: "",
-        tech: "Tailwind CSS and Figma. **",
+        tech: "Tailwind CSS, Javascript, HTML and Figma. **",
         images: [
             { url: "/sliderImages/Sylvia1.png", title:"Landing Page"},
             { url: "/sliderImages/Sylvia2.png", title:"Science Communication"},
@@ -49,25 +49,6 @@ const projects = [
         projectid: "bemify"
     },
     {
-        title: "Dentistimo",
-        type: "Back end",
-        description: "Dentistimo is a web application designed to simplify the process of booking dentist appointments in Gothenburg. Users can search for local clinics, view clinic information, and book or manage appointments through an interactive map. Dentists and clinic administrators can manage schedules and view bookings via dedicated accounts. The platform is built with a distributed backend architecture, utilizing MQTT for communication between components, and follows a service-based structure to ensure efficiency and reliability.",
-        extended_description: "",
-        tech: "React, Node.js, MongoDB, and MQTT.",
-        images: [
-            { url: "", title:""},
-            { url: "", title:""},
-            { url: "", title:""},
-            { url: "", title:""},
-            { url: "", title:""},
-            { url: "", title:""},
-            { url: "", title:""},
-            { url: "", title:""},
-        ],
-        projectid: "dentistimo"
-      
-    },
-    {
         title: "TimeSync",
         type: "UI Design, Prototyping, Interaction Design",
         description: "Designed the user interface for TimeSync, a concept startup aimed at simplifying group scheduling for students. The app integrates users' personal calendars into a shared group calendar, streamlining event planning through color-coded availability and voting on time slots. Features like cross-platform calendar synchronization, in-app group chat, and a &quot;Memories&quot; section (to revisit shared events) were designed to enhance collaboration and social connection.",
@@ -100,6 +81,25 @@ const projects = [
         ],
         github: "https://github.com/DIT113-V22/group-06",
         projectid: "monkeycar"
+    },
+    {
+        title: "Dentistimo",
+        type: "Back end",
+        description: "Dentistimo is a web application designed to simplify the process of booking dentist appointments in Gothenburg. Users can search for local clinics, view clinic information, and book or manage appointments through an interactive map. Dentists and clinic administrators can manage schedules and view bookings via dedicated accounts. The platform is built with a distributed backend architecture, utilizing MQTT for communication between components, and follows a service-based structure to ensure efficiency and reliability.",
+        extended_description: "",
+        tech: "React, Node.js, MongoDB, and MQTT.",
+        images: [
+            { url: "", title:""},
+            { url: "", title:""},
+            { url: "", title:""},
+            { url: "", title:""},
+            { url: "", title:""},
+            { url: "", title:""},
+            { url: "", title:""},
+            { url: "", title:""},
+        ],
+        projectid: "dentistimo"
+      
     },
     {
         title: "Portfolio Website",

@@ -82,14 +82,7 @@ export const Contact = () => {
                             0034620122058
                         </div>
                     </div>
-                    <div className="row contact-info-row">
-                        <div className="col-1 d-flex justify-content-center align-items-center">
-                            <LinkedInIcon id="contact-icon" />
-                        </div>
-                        <div className="col-11 d-flex align-items-center">
-                            <a href="https://www.linkedin.com/in/elisa-ahlbäck-norris-1102991b6" target="_blank" id="name-linkedin">Elisa Ahlbäck Norris</a>
-                        </div>
-                </div>
+                    
             </div>
         </div>
 
