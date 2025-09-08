@@ -75,11 +75,11 @@ body {
   height: 100vh;   /* Full height of the viewport */
 }
 
-.about-me-left {
+.about-me-right {
   background-color: #212427;
 }
 
-.about-me-left-text {
+.about-me-right-text {
   font-weight: 800;
   font-size: 5vw;
   color: #F8F3E9;
@@ -87,23 +87,62 @@ body {
   margin-right: 60px;
 }
 
-.about-me-right {
-  border-style: solid;
-  background-color: transparent;
+
+.about-left {
+  border: 1px solid #212427;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem; /* space between sections */
+  max-width: 500px;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #212427;
 }
 
-.about-me-right-text {
-  font-size: 1rem;
-  font-weight: 380;
+/* Greeting */
+.about-greeting {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Intro paragraph */
+.about-intro {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #444;
+}
+
+/* Call-to-action emphasis */
+.about-cta {
+  font-weight: 600;
+}
+
+.about-greeting, .about-intro, .about-background, .about-values, .about-cta {
+  margin-left: 7vw;
   margin-right: 7vw;
 }
 
 #cv_icon {
   height: auto;
   width: 4vw;
+    transition: transform 0.3s ease;
+
 
 }
 
+#cv_icon:hover {
+  animation: wiggle 1s ease-in-out infinite;
+}
+
+/* Keyframes for wiggle effect */
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(-15deg); }
+  75% { transform: rotate(15deg); }
+  100% { transform: rotate(0deg); }
+}
 
 /* Projects row styling */
 
@@ -129,23 +168,6 @@ body {
   padding: 0; /* Remove extra padding */
   max-width: 1200px; /* Limits the width of the project block */
 }
-
-/* .project-item {
-  background-color: rgba(33, 36, 39, 0.33);
-  border-radius: 200px;
-  border-width: 1.5px;
-  height: 460px;
-  width: 220px;
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Vertically and horizontally centers the content */
-  /*margin: 2vh;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  font-weight: 600;
-  color: #212427;
-  text-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-} */
 
 .project-item {
   height: 460px;
@@ -208,3 +230,4 @@ a {
   transition: transform 0.3s ease-in-out;
   position: absolute;
 }
+
