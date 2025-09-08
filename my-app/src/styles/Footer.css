@@ -9,9 +9,9 @@
 #footer-logo {
     height: 5vh;
     width: 6vw;
+    transition: transform 0.3s ease;
 }
 
 #footer-logo:hover {
-    border-color: #212427;
-    fill-opacity: 0;
+    transform: scale(1.1);
 }
