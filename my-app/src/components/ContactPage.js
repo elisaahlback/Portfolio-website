@@ -31,62 +31,45 @@ export const Contact = () => {
 
   return (
     <div id="contact-page">
-        <div class="row">
-            <div className="col d-flex justify-content-center contact-page-title">
-                Let's talk!
-            </div>
-        </div>
+        <div className="contact-page-title">Let's talk!</div>
 
-        <div class="row contact-row align-items-center justify-content-center flex-wrap">
-            <div className="col-7 flex-column">
-                <form ref={form} id="contact-form" onSubmit={sendEmail}>
-                    <div className="row send-message-row justify-content-center mb-3">
-                        <div class="col-6 name-label">
-                            Name
-                            <input class="form-control" type="text" name="name" required />
-                        </div>
-                    </div>
-                    <div className="row send-message-row justify-content-center mb-3">
-                        <div class="col-6 email-label">
-                            E-mail
-                            <input class="form-control" type="email" name="email" required />
-                        </div>
-                    </div>
-                    <div class="row send-message-row justify-content-center mb-3">
-                        <div class="col-6">
-                            Message
-                            <textarea class="form-control text-start" name="message" required />
-                        </div>
-                    </div>
-                    <div class="row send-button-row justify-content-end">
-                        <div class="col-6 text-end">
-                            <button type="submit" class="send-button">Send</button>
-                        </div>
-                    </div>
+            <div className="contact-container">
+                {/* Left: Form */}
+                <form ref={form} onSubmit={sendEmail} className="contact-form-box">
+                <label className="contact-label">
+                    Full Name
+                    <input className="contact-form" type="text" name="name" required />
+                </label>
+
+                <label className="contact-label">
+                    E-mail
+                    <input className="contact-form" type="email" name="email" required />
+                </label>
+
+                <label className="contact-label">
+                    Message
+                    <textarea className="contact-form" name="message" required />
+                </label>
+
+                <button type="submit" className="send-button">Send</button>
                 </form>
-            </div>
-            <div class="col-5 contact-info-box d-flex flex-column align-items-center justify-content-center my-auto">
-                    <div className="row contact-info-row mb-4">
-                        <div className="col-1 d-flex justify-content-center align-items-center">
-                            <EmailIcon id="contact-icon" />
-                        </div>
-                        <div className="col-11 d-flex align-items-center">
-                            ahlbackelisa@gmail.com
-                        </div>
-                    </div>
-                    <div className="row contact-info-row mb-4">
-                        <div className="col-1 d-flex justify-content-center align-items-center">
-                            <PhoneIcon id="contact-icon" />
-                        </div>
-                        <div className="col-11 d-flex align-items-center">
-                            0034620122058
-                        </div>
-                    </div>
-                    
+
+                {/* Right: Contact info */}
+                <div className="contact-info-box">
+                <div className="info-section">
+                    <h3>Contact</h3>
+                    <p>ahlbackelisa@gmail.com</p>
+                    <p>+34620122058</p>
+                </div>
+
+                <div className="info-section">
+                    <h3>Based in</h3>
+                    <p>Gothenburg, Sweden</p>
+                    <p>& Copenhagen, Denmark</p>
+                </div>
+                </div>
             </div>
         </div>
-
-    </div>
   );
 };
 

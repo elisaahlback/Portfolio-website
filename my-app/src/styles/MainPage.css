@@ -173,16 +173,22 @@ a {
   border-radius: 50px;
   font-size: 1rem;
   font-weight: 380;
-  background-color: #F8F3E9;
-  height: 2.8rem;
+  background-color: transparent;
+  height: 3rem;
   width: 8vw;
   text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease; 
 }
 
 .more-projects-button:hover {
   background-color: #33383b; /* Darkens the button on hover */
   color: #F8F3E9;
+  transform: scale(1.05);        /* subtle grow */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
 
@@ -199,7 +205,6 @@ a {
   width: 100%; 
   height: 100%;
   object-fit: cover;
-  /* transform-origin: center center; */
   transition: transform 0.3s ease-in-out;
   position: absolute;
 }
