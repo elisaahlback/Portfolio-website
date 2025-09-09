@@ -88,14 +88,15 @@ const MainPage = () => {
                   <p className="about-cta">
                     Excited to bring fresh ideas and a positive attitude to a dynamic team!
                   </p>
-
-                  <img
+                  <a href="/TechCV_ElisaAhlback.pdf" target="_blank" rel="noopener noreferrer">
+                    <img
                       src={require('.././assets/CVicon.png')}
                       alt="CV icon"
                       style={{ cursor: 'pointer' }}
                       id="cv_icon"
-                      onClick={() => window.open('.././assets/TechCV_ElisaAhlback.pdf', '_blank')}
                     />
+                  </a>
+                  
                   
                 </div>
 
