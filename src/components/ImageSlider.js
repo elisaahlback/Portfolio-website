@@ -28,7 +28,7 @@ const ImageSlider = ({ slides }) => {
           >
             {slide.url.endsWith(".mp4") ? (
               <video
-                src={slide.url}
+                src={process.env.PUBLIC_URL + slide.url}
                 className="d-block w-100"
                 controls
                 autoPlay
@@ -39,7 +39,7 @@ const ImageSlider = ({ slides }) => {
             ) : isYouTube(slide.url) ? (
               <div className="video-container">
                 <iframe
-                  src={slide.url}
+                  src={process.env.PUBLIC_URL + slide.url}
                   title={slide.title}
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -48,7 +48,7 @@ const ImageSlider = ({ slides }) => {
               </div>
             ) : (
               <img
-                src={slide.url}
+                src={process.env.PUBLIC_URL + slide.url}
                 className="d-block w-100"
                 alt={`Slide ${index + 1}`}
               />
