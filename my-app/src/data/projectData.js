@@ -79,10 +79,10 @@ const projects = [
         images: [
             { url: "/sliderImages/TimeSync1.png", title:"Figma: Landing Page"},
             { url: "/sliderImages/TimeSync2.png", title:"Figma: Log in Page"},
-            { url: "/sliderImages/TimeSync3.png", title:"Figma: Personal calendar Page (first iteration)"},
-            { url: "/sliderImages/TimeSync4.png", title:"Figma: Group schedule Page (first iteration)"},
-            { url: "/sliderImages/TimeSync5.png", title:"Figma: Personal calendar Page (second iteration)"},
-            { url: "/sliderImages/TimeSync6.png", title:"Figma: Group schedule Page (second iteration)"},
+            { url: "/sliderImages/TimeSync3.png", title:"Figma: Personal calendar Page (1st iteration)"},
+            { url: "/sliderImages/TimeSync4.png", title:"Figma: Group schedule Page (1st iteration)"},
+            { url: "/sliderImages/TimeSync5.png", title:"Figma: Personal calendar Page (2nd iteration)"},
+            { url: "/sliderImages/TimeSync6.png", title:"Figma: Group schedule Page (2nd iteration)"},
             { url: "/sliderImages/TimeSync7.png", title:"Figma: Create new event"},
             { url: "/sliderImages/TimeSync8.png", title:"Figma: Create new group channel"},
             { url: "/sliderImages/TimeSync9.png", title:"Figma: Settings Page"},
@@ -101,7 +101,7 @@ const projects = [
         ],
         tech: "HTML, CSS, JavaScript, C++ and MQTT",
         images: [
-            { url: "/sliderImages/MonkeyCar1.png", title:"Figma: UI (first iteration)"},
+            { url: "/sliderImages/MonkeyCar1.png", title:"Figma: UI (1st iteration)"},
             { url: "/sliderImages/MonkeyCar2.png", title:"Implemented UI"},
             { url: "/sliderImages/MonkeyCar3.png", title:"The emulator SMCE"},
             { url:"https://www.youtube.com/embed/aWcq6sd0ovw", title:"Youtube presentation"},
@@ -146,12 +146,12 @@ const projects = [
         tech: "React, Javascript, Bootstrap, HTML, CSS and Figma",
         images: [
             { url: "/sliderImages/Portfolio1.png", title:"Figma interactions"},
-            { url: "/sliderImages/Portfolio2.png", title:"Figma: Main Page (first iteration)"},
-            { url: "/sliderImages/Portfolio3.png", title:"Figma: Mobile view"},
-            { url: "/sliderImages/Portfolio4.png", title:"Figma: Main Page (second iteration)"},
+            { url: "/sliderImages/Portfolio2.png", title:"Figma: Main Page - Hero (1st iteration)"},
+            { url: "/sliderImages/Portfolio3.png", title:"Figma: Main Page - About me (1st iteration)"},
+            { url: "/sliderImages/Portfolio4.png", title:"Figma: Main Page - Projects (1st iteration)"},
             { url: "/sliderImages/Portfolio5.png", title:"Figma: Projects Page"},
             { url: "/sliderImages/Portfolio6.png", title:"Figma: Contact Page"},
-            { url: "/sliderImages/Portfolio7.png", title:"Figma: Main Page (second iteration)"},
+            { url: "/sliderImages/Portfolio7.png", title:"Figma: Main Page - Projects (2nd iteration)"},
         ],
         projectid: "portfoliowebsite"
     }
