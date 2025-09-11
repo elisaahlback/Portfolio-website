@@ -42,6 +42,16 @@ body {
   font-family: 'Outfit', sans-serif;
 }
 
+/* Remove underline on all links when hovered */
+a:hover {
+  text-decoration: none;
+}
+
+/* Optional: remove underline always, not just on hover */
+a {
+  text-decoration: none;
+}
+
 .hero-full-screen, .aboutme, .projects-row, .contact {
   scroll-snap-align: start;
 }
@@ -50,7 +60,7 @@ body {
 /* Hero styling */
 
 .hero-full-screen {
-  height: 80vh; /* Occupies 100% of the viewport height */
+  height: 86vh; /* Occupies 100% of the viewport height */
   display: flex; /* Flexbox to center content */
   align-items: center; /* Vertically centers the content */
   justify-content: center; /* Horizontally centers the content */
@@ -79,12 +89,32 @@ body {
   background-color: #212427;
 }
 
+.about-me-right-sm {
+  background-color: #212427;
+  height: 40vh;
+}
+
 .about-me-right-text {
   font-weight: 800;
   font-size: 5vw;
   color: #F8F3E9;
   margin-left: 7vw;
-  margin-right: 60px;
+  margin-right: 7vw;
+}
+
+.about-me-right-text-sm {
+  font-weight: 800;
+  font-size: 5vw;
+  color: #F8F3E9;
+  margin-left: 7vw;
+  margin-right: 7vw;
+}
+
+/* Apply only on small screens (less than 768px) */
+@media (max-width: 992px) {
+  .about-left {
+    height: 60vh;
+  }
 }
 
 
@@ -153,17 +183,16 @@ body {
 }
 
 .projects-title {
-  display: flex;
   font-size: 5vw;
   font-weight: 800;
-  margin-left: 7vw;
+  margin-left: 2vw;
   padding-bottom: 10px;
 }
 
 .projects-block {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; /* Distributes the project items evenly */
+  justify-content: center; /* Distributes the project items evenly */
   margin: 30px auto; /* Centers the block */
   padding: 0; /* Remove extra padding */
   max-width: 1200px; /* Limits the width of the project block */
@@ -184,6 +213,11 @@ body {
 
 a {
   color: #F8F3E9;
+}
+
+.slick-slide {
+  display: flex !important;
+  justify-content: center;
 }
 
 .more-projects-button {

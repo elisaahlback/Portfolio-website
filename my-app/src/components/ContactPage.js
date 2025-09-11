@@ -66,6 +66,7 @@ export const Contact = () => {
                     <h3>Based in</h3>
                     <p>Gothenburg, Sweden</p>
                     <p>& Copenhagen, Denmark</p>
+                    <p>Open to relocating</p>
                 </div>
                 </div>
             </div>

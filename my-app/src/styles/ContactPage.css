@@ -125,6 +125,8 @@ textarea.contact-form {
   flex-direction: column;
   gap: 40px;
   font-size: 1rem;
+  align-items: center;
+  height: 100%;
 }
 
 .contact-info-box h3 {
