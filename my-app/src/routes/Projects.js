@@ -18,16 +18,18 @@ function Projects() {
             </div>
         </div>
         
+
         <div class="row">
             <ul>
                 {projectData.map((project) => (
                     <Project
                         title={project.title}
+                        github={project.github}
                         type={project.type}
                         description={project.description}
                         tech={project.tech}
-                        image1={project.images[2].url}
-                        image2={project.images[3].url}
+                        image1={project.images[1].url}
+                        image2={project.images[2].url}
                         projectid={project.projectid}
                     />
                 ))}

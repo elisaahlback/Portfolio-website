@@ -1,100 +1,89 @@
-import { useState } from "react";
+import React from "react";
 
-const slideStyles = {
-  width: "100%",
-  height: "100%",
-  borderRadius: "10px",
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-  textShadow: "0 6px 12px rgba(0, 0, 0, 0.2)", //not working
-};
+const isYouTube = (url) =>
+  url.includes("youtube.com") || url.includes("youtu.be");
 
-const rightArrowStyles = {
-  position: "absolute",
-  top: "50%",
-  transform: "translate(0, -50%)",
-  right: "32px",
-  fontSize: "45px",
-  color: "#fff",
-  zIndex: 1,
-  cursor: "pointer",
-  color: "#212427",
-};
 
-const leftArrowStyles = {
-  position: "absolute",
-  top: "50%",
-  transform: "translate(0, -50%)",
-  left: "32px",
-  fontSize: "45px",
-  color: "#fff",
-  zIndex: 1,
-  cursor: "pointer",
-  color: "#212427",
-};
+const ImageSlider = ({ slides }) => {
+  return (
+    <div id="projectCarousel" className="carousel slide" data-ride="carousel">
+      {/* Indicators */}
+      <ol className="carousel-indicators">
+        {slides.map((_, index) => (
+          <li
+            key={index}
+            data-target="#projectCarousel"
+            data-slide-to={index}
+            className={index === 0 ? "active" : ""}
+          ></li>
+        ))}
+      </ol>
 
-const sliderStyles = {
-  position: "relative",
-  height: "100%",
-};
+      {/* Slides */}
+      <div className="carousel-inner">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className={`carousel-item ${index === 0 ? "active" : ""}`}
+          >
+            {slide.url.endsWith(".mp4") ? (
+              <video
+                src={slide.url}
+                className="d-block w-100"
+                controls
+                autoPlay
+                onLoadedData={(e) => e.target.classList.add("loaded")}
+                loop
+              muted
+              />
+            ) : isYouTube(slide.url) ? (
+              <div className="video-container">
+                <iframe
+                  src={slide.url}
+                  title={slide.title}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            ) : (
+              <img
+                src={slide.url}
+                className="d-block w-100"
+                alt={`Slide ${index + 1}`}
+              />
+            )}
 
-const dotsContainerStyles = {
-  display: "flex",
-  justifyContent: "center",
-};
+            {/* Caption BELOW each slide */}
+            <p className="project-caption text-center mt-2">
+              {slide.title}
+            </p>
 
-const dotStyle = {
-  margin: "0 3px",
-  cursor: "pointer",
-  fontSize: "20px",
-  color: "#212427",
-};
-
-const ImageSlider = ({ slides, slide_titles }) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const goToPrevious = () => {
-      const isFirstSlide = currentIndex === 0;
-      const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-      setCurrentIndex(newIndex);
-    };
-    const goToNext = () => {
-      const isLastSlide = currentIndex === slides.length - 1;
-      const newIndex = isLastSlide ? 0 : currentIndex + 1;
-      setCurrentIndex(newIndex);
-    };
-    const goToSlide = (slideIndex) => {
-      setCurrentIndex(slideIndex);
-    };
-    const slideStylesWidthBackground = {
-      ...slideStyles,
-      backgroundImage: `url(${slides[currentIndex].url})`,
-    };
-  
-    return (
-      <div style={sliderStyles}>
-        <div>
-          <div onClick={goToPrevious} style={leftArrowStyles}>
-            ❰
           </div>
-          <div onClick={goToNext} style={rightArrowStyles}>
-            ❱
-          </div>
-        </div>
-        <div style={slideStylesWidthBackground}></div>
-        <div style={dotsContainerStyles}>
-          {slides.map((slide, slideIndex) => (
-            <div
-              style={dotStyle}
-              key={slideIndex}
-              onClick={() => goToSlide(slideIndex)}
-            >
-              ●
-            </div>
-          ))}
-        </div>
-        <p class="project-description">
-          {slides[currentIndex].title}
-        </p>
+        ))}
+      </div>
+
+      {/* Arrows */}
+      <a
+        className="carousel-control-prev"
+        href="#projectCarousel"
+        role="button"
+        data-slide="prev"
+      >
+        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span className="sr-only">Previous</span>
+      </a>
+      <a
+        className="carousel-control-next"
+        href="#projectCarousel"
+        role="button"
+        data-slide="next"
+      >
+        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+        <span className="sr-only">Next</span>
+      </a>
+
+
       </div>
     );
   };

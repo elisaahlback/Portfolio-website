@@ -3,7 +3,7 @@ import "../styles/Project.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom'
 
-
+/* Listed project on projects page */
 
 const Project = ({title, type, description, tech, image1, image2, projectid}) => {
     return (
@@ -13,9 +13,9 @@ const Project = ({title, type, description, tech, image1, image2, projectid}) =>
                 <div className="project-visuals">
                     <img src={image1} alt={`${title} Visual 1`} className="project-image project-image-1"/>
                     <img src={image2} alt={`${title} Visual 2`} className="project-image project-image-2"/>
-                    <p id="view-more">
+                    {/* <p id="view-more">
                         View more
-                    </p>
+                    </p> */}
                 </div>
             </div>
             <div className="col-8 d-flex project-text flex-column align-items-start">

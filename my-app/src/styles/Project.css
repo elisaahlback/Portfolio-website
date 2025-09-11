@@ -19,6 +19,7 @@
     margin-right: 7vw;
     color: #212427;
     text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 .project-row:hover {
@@ -29,6 +30,11 @@
 
 .project-text {
     padding-top: 10px;
+    text-decoration: none;
+}
+
+.project-text:hover {
+    text-decoration: none;
 }
 
 .project-visuals {

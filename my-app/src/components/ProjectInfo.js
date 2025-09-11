@@ -5,6 +5,7 @@ import Footer from './Footer';
 import ImageSlider from "./ImageSlider";
 import projectData from '../data/projectData';
 import { useParams } from 'react-router-dom';
+import ReactMarkdown from "react-markdown";
 
 
 function ProjectInfo() {
@@ -14,25 +15,70 @@ function ProjectInfo() {
     const slides = project.images;
 
     const containerStyles = {
-        width: "90%",
+        width: "calc(100% - 1vw)",
         height: "90%",
         margin: "0 auto",
+        marginRight: "7vw"
       };
 
     return (
         <div className="App" id="project-info-page">
             <NavBar />
-            <div class="row">
-                <div class="col-7">
-                    <div class="row">
-                        <div class="col slides-container">
-                            <div style={containerStyles}>
+            <div className="row">
+                <div className="col-4 project-info-row">
+                    <div className="row">
+                        <div className="col project-title">
+                            {project.title}
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col">
+                           {project.github && project.github.trim() !== "" && (
+                            <a
+                                href={project.github}
+                                className="project-github"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Github
+                            </a>
+                            )}
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col project-extended-description">
+                            {/* {project.extended_description} */}
+                            {project.extended_description && project.extended_description.length > 0 && (
+                            <ul>
+                                {project.extended_description.map((point, index) => (
+                                <li key={index}>
+                                    <ReactMarkdown>{point}</ReactMarkdown>
+                                </li>
+                                ))}
+                            </ul>
+                            )}
+                            
+                            Tech used: 
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col project-tech">
+                            {project.tech}
+                        </div>
+                    </div>
+                </div>
+
+
+                <div className="col-7">
+                    <div className="row">
+                        <div className="col slides-container">
+                            <div style={containerStyles} className="slides">
                                 <ImageSlider slides={slides} />
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col">
+                    <div className="row">
+                        <div className="col">
                             <div style={containerStyles}>
                                 {project.images.title}
                             </div>
@@ -40,23 +86,7 @@ function ProjectInfo() {
                     </div>
                     
                 </div>
-                <div class="col-5 project-info-row">
-                    <div class="row">
-                        <div class="col project-title">
-                            {project.title}
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col project-description">
-                            {project.description}<br/>Tech used: 
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col project-tech">
-                            {project.tech}
-                        </div>
-                    </div>
-                </div>
+                
                 
             </div>
             <Footer></Footer>
