@@ -28,8 +28,8 @@ function Projects() {
                         type={project.type}
                         description={project.description}
                         tech={project.tech}
-                        image1={project.images[1].url}
-                        image2={project.images[2].url}
+                        image1={process.env.PUBLIC_URL + project.images[1].url}
+                        image2={process.env.PUBLIC_URL + project.images[2].url}
                         projectid={project.projectid}
                     />
                 ))}

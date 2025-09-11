@@ -1,6 +1,6 @@
 import '.././styles/MainPage.css';
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom"; // to get the URL to scroll down to about me section
+import { Link, useLocation } from "react-router-dom"; // to get the URL to scroll down to about me section
 import NavBar from '.././components/NavBar';
 import Footer from '.././components/Footer';
 import { Element, scroller } from 'react-scroll';
@@ -109,8 +109,8 @@ const MainPage = () => {
                   key={project.projectid}
                   title={project.title}
                   projectid={project.projectid}
-                  image1={project.images[1]?.url}
-                  image2={project.images[2]?.url}
+                  image1={process.env.PUBLIC_URL + project.images[1]?.url}
+                  image2={process.env.PUBLIC_URL + project.images[2]?.url}
                 />
               ))}
             </div>
@@ -118,7 +118,7 @@ const MainPage = () => {
 
           <div className="row">
             <div className="col d-flex align-items-center justify-content-center">
-              <a href="/Projects" className="more-projects-button">View more</a>
+              <Link to="/Projects" className="more-projects-button">View more</Link>
             </div>
           </div>
         </div>
