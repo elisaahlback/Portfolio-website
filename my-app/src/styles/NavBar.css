@@ -1,0 +1,43 @@
+nav {
+    width: 100vw;
+    height: 7rem;
+    scroll-snap-align: start;
+}
+
+#nav-logo {
+    font-family: BlackMango;
+    color: #212427;
+    height: 50px;
+    transition: transform .9s ease-in-out;
+}
+
+#nav-logo:hover {
+    transform: rotate(270deg);
+}
+
+.nav-item, #nav-button {
+    font-size: 1rem;
+    font-weight: 380;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#nav-button:hover {
+    color: #ec7e82;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.nav-item a:visited {
+    text-decoration: none;
+    color: #212427;
+}
+
+.nav-item a:active {
+    text-decoration: none;
+    color: #212427;
+    background-color: transparent;
+}

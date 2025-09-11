@@ -1,0 +1,136 @@
+.App {
+    background-image: url('.././assets/Background.svg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #212427;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    margin: 0px;
+    padding: 0px;
+  }
+
+#project-info-page {
+  height: 100vh;
+}
+
+.col-4.project-info-row {
+  padding-top: 3vh;
+}
+
+.slides-container {
+  padding-top: 5vh;
+  height: 73vh;
+  margin-right: 7vw;
+}
+
+.carousel-inner {
+  max-height: 500px;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.carousel-item img,
+.carousel-item video {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto; /* Center horizontally */
+  display: block;
+}
+
+.carousel-item {
+  min-height: 300px; /* set a minimum to avoid collapsing */
+}
+
+.carousel-item video {
+  display: none;
+}
+
+.carousel-item video.loaded {
+  display: block;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.7));
+}
+
+.carousel-indicators li {
+  filter: drop-shadow(1px 1px 1px rgba(36, 36, 36, 0.7));
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.slider-image {
+  width: 100%;
+  max-height: 400vh;
+  object-fit: contain;   /* or 'cover' if you want cropping */
+  background-color: transparent;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.project-info-row {
+  margin-top: 8vh;
+  margin-left: 8vw;
+  padding-right: 9vw;
+  height: auto;
+}
+
+
+.project-github {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #212427;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-github:hover {
+  color: #ec7e82;
+}
+
+.project-description {
+  margin-right: 7vw;
+  font-size: 1rem;
+}
+.project-extended-description {
+  font-size: 1rem;
+
+}
+
+.project-tech {
+  margin-right: 7vw;
+}
+
+.project-caption {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}

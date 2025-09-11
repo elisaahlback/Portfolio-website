@@ -1,0 +1,267 @@
+
+/* Imports */
+
+@font-face {
+  font-family: BlackMango;
+  src: url(.././assets/Black\ Mango\ Black.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*      */
+
+
+/* Overall styling */
+
+::selection {
+  background-color: #EFD4B9; /* Your chosen highlight color */
+  color: #000000; /* Your chosen text color */
+}
+
+::-moz-selection {
+  background-color: #EFD4B9; /* Same highlight color for Firefox */
+  color: #000000; /* Same text color for Firefox */
+}
+
+.App {
+  background-image: url('.././assets/Background.svg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: #212427;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Remove underline on all links when hovered */
+a:hover {
+  text-decoration: none;
+}
+
+/* Optional: remove underline always, not just on hover */
+a {
+  text-decoration: none;
+}
+
+.hero-full-screen, .aboutme, .projects-row, .contact {
+  scroll-snap-align: start;
+}
+
+
+/* Hero styling */
+
+.hero-full-screen {
+  height: 86vh; /* Occupies 100% of the viewport height */
+  display: flex; /* Flexbox to center content */
+  align-items: center; /* Vertically centers the content */
+  justify-content: center; /* Horizontally centers the content */
+  width: 100vw;
+  
+}
+
+.name {
+  font-family: BlackMango;
+  font-weight: 400;
+  font-size: clamp(2rem, 8vw, 5rem);
+  line-height: 100%;
+  color: #212427;
+  margin-left: 7.5vw;
+}
+
+
+/* About me section styling */
+
+.aboutme {
+  width: 100vw;    /* Full width of the viewport */
+  height: 100vh;   /* Full height of the viewport */
+}
+
+.about-me-right {
+  background-color: #212427;
+}
+
+.about-me-right-sm {
+  background-color: #212427;
+  height: 40vh;
+}
+
+.about-me-right-text {
+  font-weight: 800;
+  font-size: 5vw;
+  color: #F8F3E9;
+  margin-left: 7vw;
+  margin-right: 7vw;
+}
+
+.about-me-right-text-sm {
+  font-weight: 800;
+  font-size: 5vw;
+  color: #F8F3E9;
+  margin-left: 7vw;
+  margin-right: 7vw;
+}
+
+/* Apply only on small screens (less than 768px) */
+@media (max-width: 992px) {
+  .about-left {
+    height: 60vh;
+  }
+}
+
+
+.about-left {
+  border: 1px solid #212427;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem; /* space between sections */
+  max-width: 500px;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #212427;
+}
+
+/* Greeting */
+.about-greeting {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Intro paragraph */
+.about-intro {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #444;
+}
+
+/* Call-to-action emphasis */
+.about-cta {
+  font-weight: 600;
+}
+
+.about-greeting, .about-intro, .about-background, .about-values, .about-cta {
+  margin-left: 7vw;
+  margin-right: 7vw;
+}
+
+#cv_icon {
+  height: auto;
+  width: 4vw;
+    transition: transform 0.3s ease;
+
+
+}
+
+#cv_icon:hover {
+  animation: wiggle 1s ease-in-out infinite;
+}
+
+/* Keyframes for wiggle effect */
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(15deg); }
+  50% { transform: rotate(-15deg); }
+  75% { transform: rotate(15deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Projects row styling */
+
+.projects-row {
+  padding: 50px 5vw 20px 5vw;
+  height: 100vh;
+  width: 100%;
+}
+
+.projects-title {
+  font-size: 5vw;
+  font-weight: 800;
+  margin-left: 2vw;
+  padding-bottom: 10px;
+}
+
+.projects-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Distributes the project items evenly */
+  margin: 30px auto; /* Centers the block */
+  padding: 0; /* Remove extra padding */
+  max-width: 1200px; /* Limits the width of the project block */
+}
+
+.project-item {
+  height: 460px;
+  width: 220px;
+  border-radius: 200px;
+  text-align: center;
+}
+
+.project-item:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adds a shadow effect on hover */
+  color: #212427;
+}
+
+a {
+  color: #F8F3E9;
+}
+
+.slick-slide {
+  display: flex !important;
+  justify-content: center;
+}
+
+.more-projects-button {
+  display: flex;
+  align-items: center; /* Vertically centers the content */
+  justify-content: center;
+  color: #212427;
+  border: 1px solid #212427;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 380;
+  background-color: transparent;
+  height: 3rem;
+  width: 8vw;
+  text-decoration: none;
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease; 
+}
+
+.more-projects-button:hover {
+  background-color: #33383b; /* Darkens the button on hover */
+  color: #F8F3E9;
+  transform: scale(1.05);        /* subtle grow */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+
+
+.image-set {
+  width: 100%; 
+  height: 25vh;
+  position: relative;
+  display: flex;
+  /* overflow: hidden; */
+}
+
+.image-set img {
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  position: absolute;
+}
+

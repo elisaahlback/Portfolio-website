@@ -1,0 +1,140 @@
+/* Imports */
+
+@font-face {
+    font-family: BlackMango;
+    src: url(.././assets/Black\ Mango\ Black.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*      */
+
+
+/* Overall styling */
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: calc(10px + 2vmin);
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #212427;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Page wrapper */
+#contact-page {
+  background-color: #212427;
+  color: #F8F3E9;
+  padding: 50px 5vw 20px 5vw;
+  height: 86vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title */
+.contact-page-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+/* Container for form + info side by side */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 80px; /* space between form and info */
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* Left: form box */
+.contact-form-box {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 25px;
+}
+
+/* Labels above inputs */
+.contact-label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  font-weight: 500;
+  gap: 3px;
+}
+
+/* Inputs with underline */
+.contact-form {
+  border: none;
+  border-bottom: 1px solid #F8F3E9;
+  background-color: transparent;
+  padding: 8px 0;
+  font-size: 1rem;
+  color: #F8F3E9;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form:focus {
+  border-bottom-color: #EFD4B9;
+}
+
+/* Message textarea */
+textarea.contact-form {
+  resize: none;
+  height: 100px;
+}
+
+/* Send button */
+.send-button {
+  align-self: flex-start;
+  padding: 12px 32px;
+  border-radius: 200px;
+  border: 1px solid #F8F3E9;
+  background: transparent;
+  color: #F8F3E9;
+  font-size: 1rem;
+  font-weight: 380;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease; 
+}
+
+.send-button:hover {
+  background-color: #F8F3E9;
+  color: #212427;
+  transform: scale(1.05);  
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Right: contact info */
+.contact-info-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-size: 1rem;
+  align-items: center;
+  height: 100%;
+}
+
+.contact-info-box h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact-info-box p {
+  margin: 4px 0;
+}

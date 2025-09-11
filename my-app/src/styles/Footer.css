@@ -1,0 +1,17 @@
+
+.footer-row {
+    height: 7rem;
+    width: 100vw;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+#footer-logo {
+    height: 5vh;
+    width: 6vw;
+    transition: transform 0.3s ease;
+}
+
+#footer-logo:hover {
+    transform: scale(1.1);
+}

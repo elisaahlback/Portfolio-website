@@ -1,0 +1,186 @@
+/* Imports */
+
+@font-face {
+    font-family: BlackMango;
+    src: url(.././assets/Black\ Mango\ Black.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*      */
+
+
+/* Overall styling */
+
+.project-row {
+    height: 40vh;
+    width: 100vw;
+    padding-left: 7vw;
+    margin-right: 7vw;
+    color: #212427;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.project-row:hover {
+    background-color: rgba(33, 36, 39, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.project-text {
+    padding-top: 10px;
+    text-decoration: none;
+}
+
+.project-text:hover {
+    text-decoration: none;
+}
+
+.project-visuals {
+    background-color: rgba(33, 36, 39, 0);
+    border: 1px solid #212427;
+    border-radius: 10px;
+    height: 35vh;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically and horizontally centers the content */
+    margin: 2vh;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: transparent;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.project-visuals:hover {
+    background-color: rgba(33, 36, 39, 0.04);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    color: #212427;
+    transform: scale(1.05);
+}
+
+.project-visuals img {
+    width: 85%; /* Allows two images to fit side by side */
+    height: auto;
+    border-radius: 8px; /* Optional: round the image corners */
+    position: absolute;
+    object-fit: cover; /* Ensures images fill their space without stretching */
+    transition: transform 0.3s ease; /* Smooth hover effect on images */
+}
+
+
+/* Styling for the first image */
+.project-image-1 {
+    transform: rotate3d(0, 0, 1, -45deg) translate(-25%, -52%);
+    z-index: 1;
+}
+
+/* Styling for the second image */
+.project-image-2 {
+    transform: rotate3d(0, 0, 1, -45deg) translate(25%, 52%);
+    z-index: 0;
+}
+
+.main-project-card {
+  position: relative;
+  width: 300px;   /* adjust for grid size */
+  height: 200px;  /* adjust as needed */
+  margin: 15px;
+  overflow: hidden;
+}
+
+
+.project-item {
+  background-color: transparent;
+  border-radius: 200px;
+  border: 0px solid #212427;
+  height: 460px;
+  width: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2vh;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  font-weight: 600;
+  color: #F8F3E9;
+  text-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  position: relative;     /* important for absolutely placed images */
+  overflow: hidden;       /* keeps images inside pill */
+}
+
+.project-item:hover {
+    color: #F8F3E9;
+}
+
+/* Overlay layer */
+.project-item::after {
+  content: "";
+  position: absolute;
+  inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0 */
+  background-color: rgba(53, 46, 39, 0.25); /* transparent beige overlay */
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
+  border-radius: inherit; /* matches the pill shape */
+  z-index: 2;
+}
+
+.project-item:hover::after {
+  opacity: 1;
+}
+
+
+/* Title */
+.main-project-title {
+  position: absolute;
+  top: 50%;                     /* move halfway down */
+  left: 50%;                    /* move halfway across */
+  transform: translate(-50%, -50%); /* pull back by half width/height */
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  z-index: 3;
+  pointer-events: none;
+}
+
+
+/* Images positioned inside pill */
+.project-image {
+  width: 450px;              /* adjust to fit pill */
+  border-radius: 10px;
+  position: absolute;
+  bottom: 60px;              /* keeps them lower in the pill */
+  transition: transform 0.3s ease;
+}
+
+
+#view-more {
+    font-size: 1rem;
+    z-index: 10;
+}
+
+.project-title {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.project-type {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.project-description {
+    font-size: 1rem;
+}
+
+.project-tech {
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.link {
+    text-decoration: none;
+}
